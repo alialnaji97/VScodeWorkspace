@@ -1,0 +1,28 @@
+Problem: Terrain Altitude Mapping
+You are given an N x N grid representing a map, where each cell contains either True (representing water) or False (representing land).
+
+
+Your task is to write a function that returns an N x N grid where:
+* Cells with True (water) must have an altitude level of 0.
+* Cells with False (land) must have an altitude level of 1 or greater.
+* The altitude level of a land cell is determined by its shortest distance to any water cell. The further a land cell is from any water cell, the higher its altitude level.
+
+
+Example
+Input:
+[
+    [True, False, False],
+    [False, False, False],
+    [False, False, True]
+]
+Output:
+[
+    [0, 1, 2],
+    [1, 2, 1],
+    [2, 1, 0]
+]
+
+
+Notes:
+- The level of each land cell increases by 1 for each step away from the nearest water cell.
+- Cells are considered adjacent if they are directly above, below, to the left, or to the right of another cell (no diagonal adjacency).
